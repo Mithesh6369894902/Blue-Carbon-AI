@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BlueCarbon AI</string>
+    <string name="title_activity_main">BlueCarbon AI</string>
+    <string name="package_name">ai.bluecarbon.app</string>
+    <string name="custom_url_scheme">ai.bluecarbon.app</string>
+</resources>

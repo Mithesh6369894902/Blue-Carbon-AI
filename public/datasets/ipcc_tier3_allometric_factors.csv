@@ -1,0 +1,7 @@
+species_scientific_name,common_name,wood_density_g_cm3,agb_equation_a,agb_equation_b,soc_ref_depth_cm,carbon_fraction_agb,carbon_fraction_bgb
+Rhizophora mucronata,Red Mangrove,0.72,0.0509,0.941,100,0.46,0.44
+Avicennia marina,Grey Mangrove,0.64,0.0831,0.912,100,0.45,0.43
+Ceriops decandra,Yellow Mangrove,0.78,0.0612,0.935,100,0.47,0.45
+Heritiera fomes,Sundari Tree,0.85,0.0488,0.952,100,0.48,0.46
+Sonneratia apetala,Keora Mangrove,0.58,0.0715,0.905,100,0.44,0.42
+Halophila ovalis,Paddle Weed (Seagrass),0.22,0.0120,0.820,50,0.38,0.36
