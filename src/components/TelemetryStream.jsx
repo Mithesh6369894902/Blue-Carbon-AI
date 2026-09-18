@@ -114,25 +114,25 @@ export default function TelemetryStream({ selectedSite, isLiveStreaming, activeD
     <div className="space-y-6 animate-fade-in">
       
       {/* Header Banner */}
-      <div className="glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="glass-panel p-6 rounded-2xl border border-red-950/50 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="flex items-center space-x-4">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-emerald-500/20 to-cyan-500/20 border border-emerald-500/40 flex items-center justify-center">
-            <Radio className="w-6 h-6 text-emerald-400 animate-pulse" />
+          <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-red-600/25 to-rose-600/25 border border-red-500/40 flex items-center justify-center">
+            <Radio className="w-6 h-6 text-red-400 animate-pulse" />
           </div>
           <div>
             <h2 className="text-lg font-extrabold text-white">Marine IoT Buoy Sensor Telemetry</h2>
-            <p className="text-xs text-slate-400">
-              Live WebSockets Telemetry Feed from Buoy Node <code className="text-emerald-300 font-mono">#BUOY-{selectedSite.id.toUpperCase()}</code>
+            <p className="text-xs text-zinc-400">
+              Live WebSockets Telemetry Feed from Buoy Node <code className="text-red-300 font-mono">#BUOY-{selectedSite.id.toUpperCase()}</code>
             </p>
           </div>
         </div>
 
         <div className="flex items-center space-x-3">
-          <span className="flex items-center space-x-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span className="flex items-center space-x-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-red-500/10 text-red-400 border border-red-500/30">
+            <span className="w-2 h-2 rounded-full bg-red-400 animate-ping"></span>
             <span>FREQ: 2.5 SEC</span>
           </span>
-          <span className="text-xs text-slate-400 bg-slate-900 px-3 py-1.5 rounded-xl border border-slate-800 font-mono">
+          <span className="text-xs text-zinc-400 bg-zinc-950 px-3 py-1.5 rounded-xl border border-zinc-800 font-mono">
             IPFS MESH: ACTIVE
           </span>
         </div>
@@ -142,88 +142,88 @@ export default function TelemetryStream({ selectedSite, isLiveStreaming, activeD
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
         
         {/* Gauge 1: Water Salinity */}
-        <div className="glass-panel p-4 rounded-2xl border border-slate-800/90 relative overflow-hidden">
+        <div className="glass-panel p-4 rounded-2xl border border-zinc-800/90 relative overflow-hidden">
           <div className="flex justify-between items-start">
-            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Salinity</span>
-            <Droplets className="w-4 h-4 text-cyan-400" />
+            <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Salinity</span>
+            <Droplets className="w-4 h-4 text-red-400" />
           </div>
           <div className="mt-3">
             <span className="text-2xl font-black text-white">{currentReadings.salinityPpt}</span>
-            <span className="text-xs text-slate-400 ml-1 font-medium">ppt</span>
+            <span className="text-xs text-zinc-400 ml-1 font-medium">ppt</span>
           </div>
-          <div className="mt-2 text-[10px] text-emerald-400 font-semibold flex items-center gap-1">
+          <div className="mt-2 text-[10px] text-red-400 font-semibold flex items-center gap-1">
             <TrendingUp className="w-3 h-3" /> Baseline: 24-32 ppt
           </div>
         </div>
 
         {/* Gauge 2: Soil Organic Carbon */}
-        <div className="glass-panel p-4 rounded-2xl border border-slate-800/90 relative overflow-hidden">
+        <div className="glass-panel p-4 rounded-2xl border border-zinc-800/90 relative overflow-hidden">
           <div className="flex justify-between items-start">
-            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Soil Org Carbon</span>
-            <Gauge className="w-4 h-4 text-emerald-400" />
+            <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Soil Org Carbon</span>
+            <Gauge className="w-4 h-4 text-red-400" />
           </div>
           <div className="mt-3">
-            <span className="text-2xl font-black text-emerald-400">{currentReadings.socPercentage}%</span>
+            <span className="text-2xl font-black text-red-400">{currentReadings.socPercentage}%</span>
           </div>
-          <div className="mt-2 text-[10px] text-slate-400 font-semibold">
+          <div className="mt-2 text-[10px] text-zinc-400 font-semibold">
             Depth: 0 - 100cm Sediment
           </div>
         </div>
 
         {/* Gauge 3: Water Temp */}
-        <div className="glass-panel p-4 rounded-2xl border border-slate-800/90 relative overflow-hidden">
+        <div className="glass-panel p-4 rounded-2xl border border-zinc-800/90 relative overflow-hidden">
           <div className="flex justify-between items-start">
-            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Water Temp</span>
+            <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Water Temp</span>
             <Thermometer className="w-4 h-4 text-orange-400" />
           </div>
           <div className="mt-3">
             <span className="text-2xl font-black text-white">{currentReadings.waterTempC}°C</span>
           </div>
-          <div className="mt-2 text-[10px] text-slate-400 font-semibold">
+          <div className="mt-2 text-[10px] text-zinc-400 font-semibold">
             Sensor: Probe #04 Submerged
           </div>
         </div>
 
         {/* Gauge 4: Soil pH */}
-        <div className="glass-panel p-4 rounded-2xl border border-slate-800/90 relative overflow-hidden">
+        <div className="glass-panel p-4 rounded-2xl border border-zinc-800/90 relative overflow-hidden">
           <div className="flex justify-between items-start">
-            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Sediment pH</span>
-            <Activity className="w-4 h-4 text-purple-400" />
+            <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Sediment pH</span>
+            <Activity className="w-4 h-4 text-rose-400" />
           </div>
           <div className="mt-3">
             <span className="text-2xl font-black text-white">{currentReadings.soilPh}</span>
           </div>
-          <div className="mt-2 text-[10px] text-emerald-400 font-semibold">
+          <div className="mt-2 text-[10px] text-rose-300 font-semibold">
             Status: Optimal Alkaline
           </div>
         </div>
 
         {/* Gauge 5: Sea Level Anomaly */}
-        <div className="glass-panel p-4 rounded-2xl border border-slate-800/90 relative overflow-hidden">
+        <div className="glass-panel p-4 rounded-2xl border border-zinc-800/90 relative overflow-hidden">
           <div className="flex justify-between items-start">
-            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Sea Level Anomaly</span>
-            <Waves className="w-4 h-4 text-blue-400" />
+            <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Sea Level Anomaly</span>
+            <Waves className="w-4 h-4 text-zinc-300" />
           </div>
           <div className="mt-3">
             <span className="text-2xl font-black text-white">+{currentReadings.seaLevelAnomalyMm}</span>
-            <span className="text-xs text-slate-400 ml-1">mm</span>
+            <span className="text-xs text-zinc-400 ml-1">mm</span>
           </div>
-          <div className="mt-2 text-[10px] text-slate-400 font-semibold">
+          <div className="mt-2 text-[10px] text-zinc-400 font-semibold">
             Tidal Gauge Aligned
           </div>
         </div>
 
         {/* Gauge 6: Dissolved Oxygen */}
-        <div className="glass-panel p-4 rounded-2xl border border-slate-800/90 relative overflow-hidden">
+        <div className="glass-panel p-4 rounded-2xl border border-zinc-800/90 relative overflow-hidden">
           <div className="flex justify-between items-start">
-            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Dissolved Oxygen</span>
-            <Zap className="w-4 h-4 text-cyan-400" />
+            <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Dissolved Oxygen</span>
+            <Zap className="w-4 h-4 text-red-400" />
           </div>
           <div className="mt-3">
             <span className="text-2xl font-black text-white">{currentReadings.dissolvedOxygenMgL}</span>
-            <span className="text-xs text-slate-400 ml-1">mg/L</span>
+            <span className="text-xs text-zinc-400 ml-1">mg/L</span>
           </div>
-          <div className="mt-2 text-[10px] text-emerald-400 font-semibold">
+          <div className="mt-2 text-[10px] text-red-400 font-semibold">
             Marine Aeration: Normal
           </div>
         </div>
@@ -234,15 +234,15 @@ export default function TelemetryStream({ selectedSite, isLiveStreaming, activeD
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
         {/* Chart 1: Real-Time Salinity & Temp Stream */}
-        <div className="lg:col-span-2 glass-panel p-5 rounded-2xl border border-slate-800">
+        <div className="lg:col-span-2 glass-panel p-5 rounded-2xl border border-zinc-800">
           <div className="flex items-center justify-between mb-4">
             <div>
               <h3 className="text-sm font-extrabold text-white flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-emerald-400" /> Live Sensor Telemetry Stream (Past 30 Seconds)
+                <TrendingUp className="w-4 h-4 text-red-400" /> Live Sensor Telemetry Stream (Past 30 Seconds)
               </h3>
-              <p className="text-xs text-slate-400">Comparing Water Salinity (ppt) vs Soil Organic Carbon (%)</p>
+              <p className="text-xs text-zinc-400">Comparing Water Salinity (ppt) vs Soil Organic Carbon (%)</p>
             </div>
-            <span className="text-[11px] text-emerald-400 font-mono bg-emerald-500/10 px-2.5 py-1 rounded-lg border border-emerald-500/20">
+            <span className="text-[11px] text-red-400 font-mono bg-red-500/10 px-2.5 py-1 rounded-lg border border-red-500/20">
               UPDATED LIVE
             </span>
           </div>
@@ -250,55 +250,55 @@ export default function TelemetryStream({ selectedSite, isLiveStreaming, activeD
           <div className="h-64 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={telemetryHistory}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
-                <XAxis dataKey="time" stroke="#64748b" fontSize={11} />
-                <YAxis stroke="#64748b" fontSize={11} domain={['auto', 'auto']} />
+                <CartesianGrid strokeDasharray="3 3" stroke="#1f1f2e" />
+                <XAxis dataKey="time" stroke="#71717a" fontSize={11} />
+                <YAxis stroke="#71717a" fontSize={11} domain={['auto', 'auto']} />
                 <Tooltip 
-                  contentStyle={{ backgroundColor: '#07152b', borderColor: '#10b981', borderRadius: '12px', fontSize: '12px' }}
+                  contentStyle={{ backgroundColor: '#09090e', borderColor: '#ef4444', borderRadius: '12px', fontSize: '12px', color: '#fff' }}
                 />
-                <Line type="monotone" dataKey="salinity" name="Salinity (ppt)" stroke="#22d3ee" strokeWidth={2.5} dot={false} />
+                <Line type="monotone" dataKey="salinity" name="Salinity (ppt)" stroke="#ef4444" strokeWidth={2.5} dot={false} />
                 <Line type="monotone" dataKey="temp" name="Water Temp (°C)" stroke="#f97316" strokeWidth={2} dot={false} />
-                <Line type="monotone" dataKey="soc" name="SOC (%)" stroke="#10b981" strokeWidth={2.5} dot={false} />
+                <Line type="monotone" dataKey="soc" name="SOC (%)" stroke="#fb7185" strokeWidth={2.5} dot={false} />
               </LineChart>
             </ResponsiveContainer>
           </div>
         </div>
 
         {/* Anomaly / Alert Log */}
-        <div className="glass-panel p-5 rounded-2xl border border-slate-800 flex flex-col justify-between">
+        <div className="glass-panel p-5 rounded-2xl border border-zinc-800 flex flex-col justify-between">
           <div>
-            <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+            <div className="flex items-center justify-between border-b border-zinc-800 pb-3 mb-4">
               <h3 className="text-sm font-extrabold text-white flex items-center gap-2">
                 <AlertCircle className="w-4 h-4 text-orange-400" /> Automated Telemetry Anomaly Log
               </h3>
-              <span className="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full font-semibold">
+              <span className="text-[10px] bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded-full font-semibold">
                 AI Filter Active
               </span>
             </div>
 
             {anomalyLogs.length === 0 ? (
-              <div className="text-center py-10 text-slate-500 text-xs">
-                <Clock className="w-8 h-8 mx-auto mb-2 opacity-40 text-emerald-400" />
+              <div className="text-center py-10 text-zinc-500 text-xs">
+                <Clock className="w-8 h-8 mx-auto mb-2 opacity-40 text-red-400" />
                 No sensor anomalies detected. Telemetry operating within baseline thresholds.
               </div>
             ) : (
               <div className="space-y-2.5">
                 {anomalyLogs.map((log) => (
-                  <div key={log.id} className="p-3 rounded-xl bg-orange-500/10 border border-orange-500/30 text-xs flex items-center justify-between">
+                  <div key={log.id} className="p-3 rounded-xl bg-red-500/10 border border-red-500/30 text-xs flex items-center justify-between">
                     <div>
-                      <span className="font-extrabold text-orange-300">{log.param}</span>
-                      <p className="text-[11px] text-slate-400">Value recorded: <strong className="text-white">{log.val}</strong></p>
+                      <span className="font-extrabold text-red-300">{log.param}</span>
+                      <p className="text-[11px] text-zinc-400">Value recorded: <strong className="text-white">{log.val}</strong></p>
                     </div>
-                    <span className="text-[10px] font-mono text-slate-400">{log.time}</span>
+                    <span className="text-[10px] font-mono text-zinc-400">{log.time}</span>
                   </div>
                 ))}
               </div>
             )}
           </div>
 
-          <div className="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+          <div className="pt-3 border-t border-zinc-800 text-[11px] text-zinc-400 flex items-center justify-between">
             <span>Hardware Protocol: LoRaWAN / Satellite Gateway</span>
-            <span className="text-emerald-400 font-semibold">Mesh Health: 100%</span>
+            <span className="text-red-400 font-semibold">Mesh Health: 100%</span>
           </div>
         </div>
 

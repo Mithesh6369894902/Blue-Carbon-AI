@@ -16,7 +16,7 @@ export default function App() {
   const [activeDisaster, setActiveDisaster] = useState(null);
 
   return (
-    <div className="min-h-screen bg-[#030a16] text-slate-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#030712] text-slate-100 flex flex-col font-sans selection:bg-red-600 selection:text-white">
       
       {/* Top Main Navbar */}
       <Navbar
@@ -34,30 +34,30 @@ export default function App() {
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 lg:p-6 space-y-6">
         
         {/* Active Role Info Context Bar */}
-        <div className="glass-panel p-3 px-5 rounded-xl border border-slate-800 flex flex-wrap items-center justify-between text-xs gap-2">
+        <div className="glass-panel p-3 px-5 rounded-xl border border-red-950/50 flex flex-wrap items-center justify-between text-xs gap-2">
           <div className="flex items-center space-x-2">
-            <span className="text-slate-400 font-semibold">Active Role Context:</span>
+            <span className="text-zinc-400 font-semibold">Active Role Context:</span>
             {currentRole === 'DEVELOPER' && (
-              <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-bold uppercase flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+              <span className="px-2.5 py-0.5 rounded-full bg-red-500/15 text-red-300 border border-red-500/30 font-bold uppercase flex items-center gap-1.5 shadow-sm shadow-red-950">
+                <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span>
                 Project NGO Developer Mode (Full Admin & Simulation Access)
               </span>
             )}
             {currentRole === 'AUDITOR' && (
-              <span className="px-2.5 py-0.5 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 font-bold uppercase flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span>
+              <span className="px-2.5 py-0.5 rounded-full bg-rose-500/15 text-rose-300 border border-rose-500/30 font-bold uppercase flex items-center gap-1.5 shadow-sm shadow-rose-950">
+                <span className="w-1.5 h-1.5 rounded-full bg-rose-400 animate-ping"></span>
                 MoES Verifier Auditor Mode (Government Verification & Signature Control)
               </span>
             )}
             {currentRole === 'PUBLIC' && (
-              <span className="px-2.5 py-0.5 rounded-full bg-purple-500/15 text-purple-300 border border-purple-500/30 font-bold uppercase flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-ping"></span>
+              <span className="px-2.5 py-0.5 rounded-full bg-zinc-800 text-zinc-300 border border-red-500/25 font-bold uppercase flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-ping"></span>
                 Public Transparency Mode (Immutable Evidence Audit & Open Ledger)
               </span>
             )}
           </div>
-          <div className="text-[11px] text-slate-400 font-mono">
-            Active Site: <strong className="text-emerald-400">{selectedSite.name}</strong> ({selectedSite.state})
+          <div className="text-[11px] text-zinc-400 font-mono">
+            Active Site: <strong className="text-red-400">{selectedSite.name}</strong> ({selectedSite.state})
           </div>
         </div>
 
@@ -115,19 +115,19 @@ export default function App() {
       </main>
 
       {/* Footer System Status Bar */}
-      <footer className="glass-panel border-t border-slate-800/80 px-6 py-3 text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-2 mt-auto">
+      <footer className="glass-panel border-t border-red-950/40 px-6 py-3 text-xs text-zinc-400 flex flex-col sm:flex-row items-center justify-between gap-2 mt-auto">
         <div className="flex items-center space-x-3">
-          <span className="flex items-center space-x-1.5 text-emerald-400 font-semibold">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span className="flex items-center space-x-1.5 text-red-400 font-semibold">
+            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
             <span>MoES Blue Carbon Mesh: Operational</span>
           </span>
-          <span className="text-slate-600">•</span>
+          <span className="text-zinc-600">•</span>
           <span>5 Major Hotspots Tracked</span>
-          <span className="text-slate-600">•</span>
+          <span className="text-zinc-600">•</span>
           <span>Polygon POS Audit Ledger</span>
         </div>
 
-        <div className="text-[11px] text-slate-500 font-mono">
+        <div className="text-[11px] text-zinc-500 font-mono">
           Clean & Green Technology • Ministry of Earth Sciences
         </div>
       </footer>
